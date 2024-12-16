@@ -1,0 +1,268 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 4,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 5,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 2,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 9,
+			"com.tldraw.shape.note": 8,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 0,
+			"com.tldraw.shape.arrow": 5,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 4,
+			"com.tldraw.shape.video": 2,
+			"com.tldraw.binding.arrow": 0
+		}
+	},
+	"records": [
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": -2980.496375098246,
+			"y": -9.233570476556224,
+			"lastActivityTimestamp": 1734357515495,
+			"meta": {}
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:size": "xl",
+				"tldraw:geo": "rectangle",
+				"tldraw:dash": "solid",
+				"tldraw:fill": "none",
+				"tldraw:font": "mono",
+				"tldraw:color": "black"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1539.7012939453125,
+				"h": 815.1904296875
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1.0807291269302368,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"editingShapeId": "shape:1TvFqbir29ZG88yvxFmqn",
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:1TvFqbir29ZG88yvxFmqn"
+			],
+			"hoveredShapeId": "shape:1TvFqbir29ZG88yvxFmqn",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 3628.7096179614705,
+			"y": 1670.0553295543325,
+			"z": 0.2895968133461334,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"x": 931.1704860763816,
+			"y": 14.064325913470725,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:STUjD-fvztyhqwl3o7xPZ",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "xl",
+				"w": 490.40914631839104,
+				"text": "INCEPTION",
+				"font": "mono",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 2.8351503475315343
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 837.7598553350422,
+			"y": -150.1185046527944,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:MOyuXBtrj22sXXbH_vPzz",
+			"type": "geo",
+			"props": {
+				"w": 843.6985181009463,
+				"h": 473.10036111615943,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "solid",
+				"size": "xl",
+				"font": "draw",
+				"text": "",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a24j2",
+			"typeName": "shape"
+		},
+		{
+			"x": 216.40711553026904,
+			"y": -107.73029356959489,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:syJZCS66QSm3qntqqJIw8",
+			"type": "arrow",
+			"props": {
+				"dash": "solid",
+				"size": "xl",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": -2561.9997527617693,
+					"y": -205.65149437345747
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "mono",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a30CR",
+			"typeName": "shape"
+		},
+		{
+			"x": 240.16146840861484,
+			"y": -139.8098116633795,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:rxIuCAtut1L0wv3hSWVpP",
+			"type": "text",
+			"props": {
+				"color": "red",
+				"size": "xl",
+				"w": 555.3422241210938,
+				"text": "WHAT ARE CONTAINERS ?",
+				"font": "mono",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a45z5",
+			"typeName": "shape"
+		},
+		{
+			"x": -3379.973992452129,
+			"y": -442.6973689885042,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:1TvFqbir29ZG88yvxFmqn",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "xl",
+				"w": 1083.284423828125,
+				"text": "CONTAINER IS A LIGHT-WIEGHT \nISOLATED ENVIROMENT THAT PACKAGES\nAN APPLICATION AND IT'S DEPENDENCIES\nTOGETHER, IT ENSURES THAT THE\nAPPLICATION RUNS IN DIFFRENT ENVIROMENTS\nBY ENCAPSULATING EVERYTHING IT NEEDS SUCH\nAS CODE RUNTIME LIKE PYTHON OR NODE.JS, \nLIBRARIES...",
+				"font": "mono",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a54IS",
+			"typeName": "shape"
+		}
+	]
+}
