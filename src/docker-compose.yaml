@@ -1,0 +1,46 @@
+networks:
+  inception:
+    name: inception
+services:
+  mariadb:
+    build:
+      context: ./requirements/mariadb
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./requirements/mariadb/mariadbdatabase:/var/lib/mysql
+    env_file:
+      - .env
+    networks:
+      - inception
+  wordpress:
+    build:
+      context: ./requirements/wordpress
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./requirements/wordpress/wordpressdatabase:/var/www/html
+    depends_on:
+      - mariadb
+    env_file:
+      - .env
+    networks:
+      - inception
+  nginx:
+    build:
+      context: ./requirements/nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ./requirements/nginx/nginxdatabase:/var/www/html
+    depends_on:
+      - wordpress
+    networks:
+      - inception
+  

@@ -8,4 +8,6 @@ RUN chmod +x /script.sh
 
 COPY ./html /var/www/html
 
+COPY ./wp-config.php /
+
 CMD ["/script.sh"]
