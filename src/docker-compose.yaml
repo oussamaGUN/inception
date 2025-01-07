@@ -3,62 +3,63 @@ volumes:
     name: wordpress
     driver: local
     driver_opts:
-      device: src/requirements/nginx/nginxdatabase
-      o: bind
-      type: none
+      type: 'none'
+      o: 'bind'
+      device: '/home/oussama/data/wordpress'
+
   mariadb:
     name: mariadb
     driver: local
     driver_opts:
-      device: ./requirements/mariadb/mariadbdatabase/database
-      o: bind
-      type: none
+      type: 'none'
+      o: 'bind'
+      device: '/home/oussama/data/mariadb'
 
 networks:
   inception:
     driver: bridge
 
-
 services:
   mariadb:
-    build:
-      context: ./requirements/mariadb
-      dockerfile: Dockerfile
-    image: mariadb:42
-    restart: always
-    volumes:
-      - ./requirements/mariadb/mariadbdatabase:/var/lib/mysql
-    env_file:
-      - .env
+    container_name: mariadb			# Le nom du container, oui vraiment.
     networks:
-      - inception
-
-  wordpress:
-    build:
-      context: ./requirements/wordpress
-      dockerfile: Dockerfile
-    image: wordpress:42
-    restart: always
-    volumes:
-      - /home/oussama/Desktop/inception/src/requirements/wordpress/wordpressdatabase:/var/www/html
-    depends_on:
-      - mariadb
-    env_file:
-      - .env
-    networks:
-      - inception
-      
+      - inception            			# à quel network il appartient
+    build: 
+      context: requirements/mariadb 	# ou se trouve son Dockerfile
+      dockerfile: Dockerfile			# le nom du Dockerfile ?!
+    env_file: .env                  # le fichier d'environnement pour transmettre les variables
+    volumes:                        # Voir plus bas
+      - mariadb:/var/lib/mysql
+    restart: unless-stopped                 # redémarrer le container en cas d'erreur
+    expose:                         # le port à exposer
+      - "3306"
   nginx:
-    build:
-      context: ./requirements/nginx
+    container_name: nginx
+    networks:
+      - inception
+    build: 
+      context: requirements/nginx
       dockerfile: Dockerfile
-    image: nginx:42
-    restart: always
+    env_file: .env
+    volumes:
+      - wordpress:/var/www/wordpress
     ports:
       - "443:443"
+    restart: on-failure
     depends_on:
-      - wordpress
+      - mariadb
+  wordpress:
+    container_name: wordpress
+    env_file: .env
+    volumes:
+      - wordpress:/var/www/wordpress
     networks:
       - inception
-
-  
+    build: 
+      context: requirements/WordPress
+      dockerfile: Dockerfile
+    depends_on:    					# WordPress démarrera uniquement après MariaDB (sinon il ne pourra pas configurer la base de données...)
+      - mariadb
+    restart: on-failure
+    expose: 
+      - "9000"
