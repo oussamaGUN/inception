@@ -35,7 +35,7 @@ RUN chmod +x wp-cli.phar
 RUN mv wp-cli.phar /usr/local/bin/wp
 
 # Copy the WordPress setup script
-COPY ./script.sh /bin/
-RUN	chmod +x /bin/script.sh
+COPY ./auto_config.sh /bin/
+RUN	chmod +x /bin/auto_config.sh
 
-CMD	["sh", "/bin/script.sh"]
+CMD	["sh", "/bin/auto_config.sh"]

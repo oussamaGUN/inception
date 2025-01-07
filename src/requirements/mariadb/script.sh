@@ -16,5 +16,5 @@ mysql -u root -proot_password -e "FLUSH PRIVILEGES;"
 
 mysqladmin -u root -p$SQL_ROOT_PASSWORD shutdown
 
-echo "MariaDB started successfully"
+
 exec mysqld_safe

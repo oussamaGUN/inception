@@ -1,11 +1,7 @@
 #!/bin/bash
 #tail -f /dev/null
 sleep 20
-while ! mariadb -h mariadb -u $SQL_USER -p$SQL_PASSWORD;
-do
-    echo "waiting..."
-    sleep 2
-done
+
 
 # Install WordPress
 wp core install --url="$WP_URL" \
@@ -16,6 +12,7 @@ wp core install --url="$WP_URL" \
     --skip-email \
     --path='/var/www/wordpress' \
     --allow-root
+
 
 # Create a new WordPress user
 wp user create "$WP_USER" "$WP_EMAIL" \

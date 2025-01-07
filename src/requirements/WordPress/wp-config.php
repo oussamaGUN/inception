@@ -20,16 +20,10 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', getenv('SQL_DATABASE'));
-
-/** Database username */
-define( 'DB_USER', getenv('SQL_USER'));
-
-/** Database password */
-define( 'DB_PASSWORD', getenv('SQL_PASSWORD'));
-
-/** Database hostname */
-define( 'DB_HOST', getenv('SQL_HOST'));
+define('DB_NAME', 'wordpress');
+define('DB_USER', 'wp_user');
+define('DB_PASSWORD', 'wp_password');
+define('DB_HOST', 'mariadb');
 
 define( 'WP_HOME', getenv('WP_FULL_URL') );
 define( 'WP_SITEURL', getenv('WP_FULL_URL') );
@@ -51,7 +45,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-
+define( 'AUTH_KEY',         getenv('WP_AUTH_KEY') );
+define( 'SECURE_AUTH_KEY',  getenv('WP_SECURE_AUTH_KEY') );
+define( 'LOGGED_IN_KEY',    getenv('WP_LOGGED_IN_KEY') );
+define( 'NONCE_KEY',        getenv('WP_NONCE_KEY') );
+define( 'AUTH_SALT',        getenv('WP_AUTH_SALT') );
+define( 'SECURE_AUTH_SALT', getenv('WP_SECURE_AUTH_SALT') );
+define( 'LOGGED_IN_SALT',   getenv('WP_LOGGED_IN_SALT') );
+define( 'NONCE_SALT',       getenv('WP_NONCE_SALT') );
 
 /**#@-*/
 
