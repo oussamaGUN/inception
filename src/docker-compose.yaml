@@ -21,17 +21,17 @@ networks:
 
 services:
   mariadb:
-    container_name: mariadb			# Le nom du container, oui vraiment.
+    container_name: mariadb			
     networks:
-      - inception            			# à quel network il appartient
+      - inception            		
     build: 
-      context: requirements/mariadb 	# ou se trouve son Dockerfile
-      dockerfile: Dockerfile			# le nom du Dockerfile ?!
-    env_file: .env                  # le fichier d'environnement pour transmettre les variables
-    volumes:                        # Voir plus bas
+      context: requirements/mariadb 	
+      dockerfile: Dockerfile			
+    env_file: .env                  
+    volumes:                        
       - mariadb:/var/lib/mysql
-    restart: unless-stopped                 # redémarrer le container en cas d'erreur
-    expose:                         # le port à exposer
+    restart: unless-stopped                 
+    expose:                         
       - "3306"
   nginx:
     container_name: nginx
@@ -58,7 +58,7 @@ services:
     build: 
       context: requirements/WordPress
       dockerfile: Dockerfile
-    depends_on:    					# WordPress démarrera uniquement après MariaDB (sinon il ne pourra pas configurer la base de données...)
+    depends_on:    					
       - mariadb
     restart: on-failure
     expose: 
