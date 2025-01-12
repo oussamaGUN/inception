@@ -12,7 +12,8 @@ RUN	apt update && apt install --no-install-recommends --no-install-suggests -y \
 	php7.4-mysql \
 	mariadb-client \
 	wget \
-	tar
+	tar \
+	php-redis
 
 # Download and extract WordPress
 RUN wget https://wordpress.org/wordpress-6.3.1.tar.gz -P /var/www

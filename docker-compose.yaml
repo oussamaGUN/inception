@@ -1,6 +1,0 @@
-services:
-  my_container:
-    build: nginxDir 
-    ports:
-      - "80:80"
-      - "443:443"
